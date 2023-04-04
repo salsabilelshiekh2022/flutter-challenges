@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_challenges/models/recommendation_news_model.dart';
+import 'package:flutter_challenges/models/news_model.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class RecommendationItem extends StatelessWidget {
-  final RecommendationNewsModel recommendationNew;
+  final NewsModel recommendationNew;
   const RecommendationItem({super.key, required this.recommendationNew});
 
   @override
