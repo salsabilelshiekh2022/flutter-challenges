@@ -26,27 +26,21 @@ List<BreakingNewsModel> dummyBreakingNews = [
       imgUrl: AppAssets.carouselHomePageAssets1,
       date: '6 hours ago'),
   BreakingNewsModel(
-      id: '1',
+      id: '2',
       title: 'Alexandria wears modified helmet races',
-      channel: 'CNN Indonesia',
+      channel: 'BBC',
       imgUrl: AppAssets.carouselHomePageAssets1,
       date: '6 hours ago'),
   BreakingNewsModel(
-      id: '1',
+      id: '3',
       title: 'Alexandria wears modified helmet races',
-      channel: 'CNN Indonesia',
+      channel: 'National',
       imgUrl: AppAssets.carouselHomePageAssets1,
       date: '6 hours ago'),
   BreakingNewsModel(
-      id: '1',
+      id: '4',
       title: 'Alexandria wears modified helmet races',
-      channel: 'CNN Indonesia',
-      imgUrl: AppAssets.carouselHomePageAssets1,
-      date: '6 hours ago'),
-  BreakingNewsModel(
-      id: '1',
-      title: 'Alexandria wears modified helmet races',
-      channel: 'CNN Indonesia',
+      channel: 'CNN',
       imgUrl: AppAssets.carouselHomePageAssets1,
       date: '6 hours ago'),
 ];

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_challenges/models/recommendation_news_model.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class RecommendationItem extends StatelessWidget {
   final RecommendationNewsModel recommendationNew;
@@ -7,24 +8,23 @@ class RecommendationItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DecoratedBox(
-      decoration: const BoxDecoration(),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(16.0),
-            child: Image.network(
-              recommendationNew.imgUrl,
-              width: 150,
-              height: 150,
-              fit: BoxFit.cover,
-            ),
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        ClipRRect(
+          borderRadius: BorderRadius.circular(16.0),
+          child: Image.network(
+            recommendationNew.imgUrl,
+            width: 120.w,
+            height: 120.h,
+            fit: BoxFit.cover,
           ),
-          const SizedBox(
-            width: 16.0,
-          ),
-          Column(
+        ),
+        const SizedBox(
+          width: 16.0,
+        ),
+        Expanded(
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
@@ -36,18 +36,17 @@ class RecommendationItem extends StatelessWidget {
               const SizedBox(
                 height: 8.0,
               ),
-              SizedBox(
-                width: 170,
-                child: Text(
-                  recommendationNew.title,
-                  maxLines: 4,
-                  style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                        fontWeight: FontWeight.bold,
-                      ),
-                ),
+              Text(
+                recommendationNew.title,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                      fontWeight: FontWeight.bold,
+                      overflow: TextOverflow.ellipsis,
+                    ),
               ),
-              const SizedBox(
-                height: 48.0,
+              SizedBox(
+                height: 40.0.h,
               ),
               Row(
                 children: [
@@ -74,17 +73,15 @@ class RecommendationItem extends StatelessWidget {
                   ),
                   Text(
                     recommendationNew.date,
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodySmall!
-                        .copyWith(color: Colors.grey),
+                    style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                        color: Colors.grey, overflow: TextOverflow.ellipsis),
                   )
                 ],
               ),
             ],
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
