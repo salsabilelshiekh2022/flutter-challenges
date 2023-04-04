@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_challenges/models/breaking_news_model.dart';
+import 'package:flutter_challenges/models/news_model.dart';
 
 class CarouselItem extends StatelessWidget {
-  final BreakingNewsModel carouselModel;
+  final NewsModel carouselModel;
   const CarouselItem({super.key, required this.carouselModel});
 
   @override

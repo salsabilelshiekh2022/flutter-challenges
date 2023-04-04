@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_challenges/models/breaking_news_model.dart';
+import 'package:flutter_challenges/models/news_model.dart';
 import 'package:flutter_challenges/views/widgets/carousel_item.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
