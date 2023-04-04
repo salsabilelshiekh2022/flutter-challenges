@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_challenges/models/breaking_news_model.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CarouselItem extends StatelessWidget {
   final BreakingNewsModel carouselModel;
@@ -21,13 +20,14 @@ class CarouselItem extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(24.0),
+            padding: const EdgeInsets.only(
+                top: 16.0, left: 24, right: 24, bottom: 24),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
                   padding: const EdgeInsets.all(6.0),
-                  width: 80,
+                  width: 70,
                   height: 30,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(24.0),
@@ -42,7 +42,7 @@ class CarouselItem extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  height: 55,
+                  height: 63,
                 ),
                 Text(
                   '${carouselModel.channel} • ${carouselModel.date}',
