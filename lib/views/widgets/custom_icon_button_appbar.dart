@@ -8,11 +8,11 @@ class CustomIconButtonAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 45,
-      width: 45,
+      height: 40,
+      width: 40,
       child: DecoratedBox(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(22.5),
+          borderRadius: BorderRadius.circular(20.0),
           color: Colors.blue.withOpacity(.08),
         ),
         child: IconButton(

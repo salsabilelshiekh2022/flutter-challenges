@@ -46,7 +46,7 @@ class RecommendationItem extends StatelessWidget {
                     ),
               ),
               SizedBox(
-                height: 40.0.h,
+                height: 32.0.h,
               ),
               Row(
                 children: [
