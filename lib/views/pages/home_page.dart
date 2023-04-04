@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_challenges/models/breaking_news_model.dart';
 import 'package:flutter_challenges/models/recommendation_news_model.dart';
+import 'package:flutter_challenges/utils/assets.dart';
 import 'package:flutter_challenges/views/widgets/carousel_item.dart';
+import 'package:flutter_challenges/views/widgets/custom_carousel_slider.dart';
 import 'package:flutter_challenges/views/widgets/custom_icon_button_appbar.dart';
 import 'package:flutter_challenges/views/widgets/header_of_list.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter_challenges/views/widgets/recommendation_item.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -58,34 +61,22 @@ class HomePage extends StatelessWidget {
                 title: 'Breaking News',
               ),
               const SizedBox(height: 16.0),
-              CarouselSlider(
-                items: carouselItems,
-                options: CarouselOptions(
-                  height: 400,
-                  enlargeCenterPage: true,
-                  autoPlay: false,
-                  aspectRatio: 16 / 9,
-                  autoPlayCurve: Curves.fastOutSlowIn,
-                  enableInfiniteScroll: true,
-                  autoPlayAnimationDuration: Duration(milliseconds: 800),
-                  viewportFraction: 0.8,
-                ),
-              ),
+              const CustomCarouselSlider(),
               SingleChildScrollView(
                 child: Transform.translate(
-                  offset: const Offset(0, -50),
+                  offset: const Offset(0, -25),
                   child: Column(
                     children: [
                       const BuildHeaderOfList(
                         title: 'Recommendation',
                       ),
                       SizedBox(
-                        height: 500,
+                        height: 500.h,
                         child: ListView.builder(
                           itemCount: dummyRecommendationNews.length,
                           itemBuilder: (context, index) => Padding(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 24, vertical: 12.0),
+                            padding: const EdgeInsets.only(
+                                right: 12, left: 24, top: 12.0, bottom: 12),
                             child: RecommendationItem(
                               recommendationNew: dummyRecommendationNews[index],
                             ),
