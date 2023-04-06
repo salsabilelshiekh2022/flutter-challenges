@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
         carouselModel: dummyBreakingNews[1],
       ),
       CarouselItem(
-        carouselModel: dummyBreakingNews[0],
+        carouselModel: dummyBreakingNews[2],
       ),
     ];
 
