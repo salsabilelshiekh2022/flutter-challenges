@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_challenges/views/pages/book_marked_news_page.dart';
 import 'package:flutter_challenges/views/pages/home_page.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent-tab-view.dart';
 
@@ -16,7 +17,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     return [
       const HomePage(),
       Container(),
-      Container(),
+      const BookMarkedNewsPage(),
       Container(),
     ];
   }
